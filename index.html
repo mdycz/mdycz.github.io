@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,600&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+    crossorigin="anonymous">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <title>MDPortfolio Site</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="main_header">
+      <div class="main_header__text">
+        <h1>Mikołaj Dyczkowski</h1>
+        <p>Front-End Web Developer</p>
+      </div>
+      <hr class="main_header__underline">
+    </header>
+    <main class="content">
+      <button class="content_picker__projects">
+        <p class="content_picker__title">Projects</p>
+        <i class="fas fa-angle-down content_picker__arrow"></i>
+      </button>
+      <button class="content_picker__about_me">
+        <p class="content_picker__title">About me</p>
+        <i class="fas fa-angle-down content_picker__arrow"></i>
+      </button>
+      <button class="content_picker__contact">
+        <p class="content_picker__title">Contact</p>
+        <i class="fas fa-angle-down content_picker__arrow"></i>
+      </button>
+      <section class="projects projects--hidden">
+        <h2 class="projects__heading">Featured Work</h2>
+        <div class="project">
+          <img src="images/project_memory-medium_1x.png" srcset="images/project_memory-large_2x.png 1920w,
+            images/project_memory-medium_1x.png 960w,
+            images/project_memory-small_0.5x.png 480w,
+            images/project_memory-xsmall_0.25x.png 240w" sizes="(max-width: 550px) 0.54vw,
+            (min-width: 1000px) 310px,
+            0.24vw" alt="fruits" class="project__img">
+          <div class="project__shadow_overlay"></div>
+          <div class="project__info">
+            <span class="project__title">
+              <strong>Memory Game</strong>
+            </span>
+            <div class="project__links">
+              <a href="https://github.com/mdycz/pair-matching-game" target="_blank" class="project__repo_link">Repo</a>
+              <a href="https://mdycz.github.io/pair-matching-game/" target="_blank" class="project__live_link">Live</a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img src="images/project_pixelart-medium_1x.png" srcset="images/project_pixelart-large_2x.png 1920w,
+            images/project_pixelart-medium_1x.png 960w,
+            images/project_pixelart-small_0.5x.png 480w,
+            images/project_pixelart-xsmall_0.25x.png 240w" sizes="(max-width: 550px) 0.54vw,
+            (min-width: 1000px) 310px,
+            0.24vw" alt="project_pixelart" class="project__img">
+          <div class="project__shadow_overlay"></div>
+          <div class="project__info">
+            <span class="project__title">
+              <strong>PixelArt Maker</strong>
+            </span>
+            <div class="project__links">
+              <a href="#" class="project__repo_link">Repo</a>
+              <a href="#" class="project__live_link">Live</a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img src="images/comingsoon-medium_1x.jpg" srcset="images/comingsoon-large_2x.jpg 1920w,
+              images/comingsoon-medium_1x.jpg 960w,
+              images/comingsoon-small_0.5x.jpg 480w,
+              images/comingsoon-xsmall_0.25x.jpg 240w" sizes="(max-width: 550px) 0.54vw,
+              (min-width: 1000px) 310px,
+              0.24vw" alt="classic car" class="project__img">
+          <div class="project__shadow_overlay"></div>
+          <div class="project__info">
+            <span class="project__title">
+              <strong>Coming soon</strong>
+            </span>
+            <div class="project__links">
+              <span href="#" class="project__repo_link">Repo</span>
+              <span href="#" class="project__live_link">Live</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about_me about_me--hidden">
+        <p class="about_me__text">I've started learning Web Development in November 2017, when I got accepted to the First Stage of Google-Udacity
+          Scholarship. I've finished this Stage in January 2018 and, while waiting for Stage 2 to begin, I've learned basics
+          of Java and Android development. In February 2018, my efforts paid off as I got a full Scholarship paid by Google.
+          The reviewing team appreciated my "progress and contribution to the community".
+        </p>
+        <h4 class="about_me__subheading">Technologies and tools:</h4>
+        <div class="about_me__technologies">
+          <img src="images/html5.svg" class="about_me__icon" alt="html5 logo">
+          <img src="images/css3.svg" class="about_me__icon" alt="css3 logo">
+          <img src="images/js.svg" class="about_me__icon" alt="javascript logo">
+          <img src="images/jquery.svg" class="about_me__icon" alt="jquery logo">
+          <img src="images/git.svg" class="about_me__icon" alt="git logo">
+          <img src="images/github.svg" class="about_me__icon" alt="grunt logo">
+          <img src="images/grunt.svg" class="about_me__icon" alt="grunt logo">
+        </div>
+        <h4 class="about_me__subheading">Google-Udacity Front End Web Developer Scholarship</h4>
+        <p class="about_me__text">I have been chosen as 1 of 2000 people from around the world to become a recipient of this scholarship. I am extremely
+          motivated to make the best use of this amazing opportunity. Currently, all my projects have been created as part
+          of this scholarship and they've been reviewed and accepted by Udacity reviewer. You can see
+          <a class="about_me__link" href="https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001">what I'm learning.</a>
+        </p>
+      </section>
+      <section class="contact contact--hidden">
+        <p class="contact__text">If you would like to know more about me, feel free to call, message or email me.</p>
+        <div class="contact__phone">
+          <i class="fas fa-phone contact__icon"></i>
+          <a href="tel:882148665" class="contact__link">882-148-665</a>
+        </div>
+        <div class="contact__mail">
+          <i class="fas fa-envelope contact__icon"></i>
+          <a href="mailto:m.dyczkowski@outlook.com" class="contact__link">m.dyczkowski@outlook.com</a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
