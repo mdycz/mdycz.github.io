@@ -7,8 +7,8 @@ const contactSection = document.querySelector('.contact');
 const projects = document.querySelectorAll('.project');
 
 function preventChildrenOfHiddenElementFromFocusing(parentCssQuerySelector) {
-  const hiddenChildren = Array.from(document.querySelector(parentCssQuerySelector)
-    .getElementsByTagName('*'));
+  const hiddenChildren = [...document.querySelector(parentCssQuerySelector)
+    .getElementsByTagName('*')];
   for (const child of hiddenChildren) {
     child.setAttribute('tabindex', '-1');
   }
@@ -25,7 +25,7 @@ function allowChildrenOfPreviouslyHiddenElementToFocus(parentCssQuerySelector) {
 function rotateArrows(clickedElement) {
   const arrows = document.querySelectorAll('.content_picker__arrow');
   for (const arrow of arrows) {
-    if(clickedElement.contains(arrow)) {
+    if (clickedElement.contains(arrow)) {
       arrow.classList.toggle('content_picker__arrow--up');
     } else arrow.classList.remove('content_picker__arrow--up');
   }
@@ -80,7 +80,7 @@ contentPickerContact.addEventListener('click', () => {
   contactSection.classList.toggle('contact--visible');
   rotateArrows(contentPickerContact);
   contentPickerContact.classList.remove('content_picker__contact--hover');
-  if (aboutMeSection.classList.contains('about_me--hidden')) {
+  if (contactSection.classList.contains('contact--hidden')) {
     preventChildrenOfHiddenElementFromFocusing('.contact');
   } else {
     allowChildrenOfPreviouslyHiddenElementToFocus('.contact');
@@ -101,7 +101,7 @@ contentPickerAboutMe.addEventListener('mousedown', (event) => {
 
 contentPickerContact.addEventListener('mousedown', (event) => {
   event.preventDefault();
-})
+});
 
 // Hover animations working on mouse only
 
@@ -131,8 +131,8 @@ for (const project of projects) {
   });
   project.addEventListener('mouseout', () => {
     project.classList.remove('project--hover');
-  })
-  project.addEventListener('click', ()=>{
+  });
+  project.addEventListener('click', () => {
     project.classList.remove('project--hover');
-  })
+  });
 }
