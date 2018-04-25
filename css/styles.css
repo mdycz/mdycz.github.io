@@ -420,12 +420,6 @@ span {
   }
 }
 
-@media screen and (max-width: 650px) {
-  .about_me__img {
-    margin-bottom: 40px;
-  }
-}
-
 @media screen and (min-width: 551px) {
   .project--hover {
     -webkit-transition: 0.7s;
